@@ -1,8 +1,23 @@
-# CLOUD DATA ENGINEER PROJECTS 🚀
+# ☁️ Cloud Data Engineer Projects
 
-Hi, I am learning Python and Data Engineering. This repository contains my mini-projects.
+This repository contains my learning journey and projects for becoming a Cloud Data Engineer.
 
-## Current Projects
-* *Python Mini Projects:* A simple banking system using Python Classes (OOP).
-* *Pandas Basics:* Experiments with data analysis libraries.
-* *Numpys Basics:* Experiments on small mini projects like * students marks analyzers and etc.
+## Skills
+- Python
+- SQL
+- Data Warehousing
+- Snowflake
+- PySpark
+- AWS
+
+## Repository Structure / still in progresss
+
+Python/
+SQL/
+Data-Warehousing/
+Snowflake/
+PySpark/
+AWS/
+ETL-Projects/
+
+More projects will be added regularly.
