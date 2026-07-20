@@ -7,7 +7,7 @@
 
     def debited (self,amount):
          self.bal -= amount
-         print("RS:", amount,"was credited")
+         print("RS:", amount,"was debited")
          print("total balance :",self.bal)
 
       def credited(self,amount):
