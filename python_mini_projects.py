@@ -1,5 +1,5 @@
 #  1st project
-
+#                 MAKING A BANK CLASS USING OOPS WHERE WE SEE SUDDEN CHNAGE WHEN WE CREDIT OR DEBIT SOME AMOUNT .
   class Bank:
      def __init__(self,acc_no,bal):
          self.acc_no=acc_no
@@ -53,6 +53,71 @@ else:
 
 print("\n\n  ALL OPERATIONS DONE SUCCESFULLY :------><><><> ✔️🎉💕🤞😎")          
 
+# ALTERNATIVE 
+# ADVANCED CALCULATOR USING SAME SYNTAX BUT BIT COMPLEX USE OF CONDITIONALS .
+
+print("><><><>\n WELCOME TO ADVANCED CALCULATORS  ><><><> \n")
+a = int(input("ENTERD THE FIRST NO :"))
+opt1 = input("ENTERD THE FIRST OPERATOR =")
+b = int(input("ENTERD THE SECOND NO ="))
+opt2 = input("ENTERD THE OPERATOR 2 = ")
+c = int(input(" ENTERD THE THIRD NO : "))
+
+if (opt1 == "+" and opt2 == "+"):
+    print("ADDITION OF ALL THE THREE NO =\n", a + b + c)
+elif ( opt1 == "+" and opt2 == "-"):
+    print("ADDITION AND SUBSTRACTION OF THREE NO = \n", a + b - c)
+elif( opt1 == "+" and opt2 == "*"):
+    print(" ADDITION AND MULTIPLICATIONS OF THREE NO IS = \n", a + b * c)
+elif ( opt1 == "+" and opt2 == "/"):
+    if( c != 0):
+        print(" ADDITION AND DIVISION OF THREE NO IS = \n", a + b / c)
+    else :
+        print(" VALUE OF BASE  C IS 0 SO CANT DEFINED")
+elif (opt1 == "-"  and opt2 == "+"):
+    print(" SUBSTRACTION AND ADDITION OF THREE NO =\n", a - b + c)
+elif( opt1 == "-" and opt2 == "-"):
+    print("SUBSTARCTION AND SUBSTRACTION OF THREE NO IS =\n", a - b - c)
+elif(opt1 == "-" and opt2 == "*"):
+    print(" SUBSTRACTION AND MULTIPLICATION OF THREE NO IS = \n", a - b * c)
+elif( opt1 == "-" and opt2 == "/"):
+    if( c != 0):
+        print("SUBSTRACTION AND DIVISION OF THREE NO IS = \n ", a - b / c)
+    else:
+        print("VALUE OF BASE  C IS 0 SO CANT DEFINED")
+elif (opt1 == "*" and opt2 == "+"):
+    print("MULTIPLICATION AND ADDITION OF THREE NO IS = \n", a * b + c)
+elif( opt1 == "*" and opt2 == "-"):
+    print("MULTIPLICATIONS AND SUBSTRACTION OF THREE NON IS = \n", a * b - c)
+elif (opt1 == "*" and opt2 == "*"):
+    print("MULTIPLICATION OF THREE NO IS =\n", a * b * c)
+elif( opt1 == "*" and opt2 == "/"):
+    if( c != 0):
+        print("MULTIPLICATION AND DIVISION OPF THREE NO = \n", a * b / c)
+    else :
+        print("VALUE OF BASE IS 0 SO CANT DEFINED")
+elif( opt1 == "/" and opt2 == "+"):
+    if ( b != 0):
+        print("DIVISION AND ADDITION OF THREE NO IS = \n", a / b + c)
+    else:
+        print("VALUE OF BASE IS 0 SO CANT DEFINED")
+elif (opt1 == "/" and opt2 == "-"):
+    if ( b != 0):
+        print("DIVISION AND SUBSTRACTION OF THREE NO IS = \n", a / b - c)
+    else:
+        print("VALUE OF BASE IS 0 SO CANT DEFINED")
+elif( opt1 == "/" and opt2 == "*"):
+    if ( b != 0):
+        print("DIVISION AND MULTIPLIVCATION OF THREE NO IS = \n", a / b - c)
+    else:
+        print("VALUE OF BASE IS 0 SO CANT DEFINED")
+elif(opt1 == "/" and opt2 == "/"):
+    if( b != 0 and c != 0):
+        print(" DIVISION OF ALL THREE NO IS = \n", a / b / c)
+else :
+    print("| OPERATORS MISMATCH DUE TO ANOTHER OPERATOR USED")
+print("><><><> | ALL THE OPERATIONS EXECUTED SUCCESFULLY ><><> | /\n")
+
 # PROJECT 2
 # NUMBER GUESSING GAME
 
@@ -92,8 +157,8 @@ def simple_password(length):
 print("Generated Password:", simple_password(100))
 
 
-PROJECT 2
-GRAPHICS IN LIBRARY
+# PROJECT 2
+# GRAPHICS IN LIBRARY
 from turtle import *
 from colorsys import *
 speed(0)
@@ -196,249 +261,22 @@ def draw():
 draw()
 done()
 
-# PROJECT 7
-# COLOURFUL SPIRAL
+#    PROJECTS 7 . 
+#    MAKING QRCODE OF ANY TEXT OR URL AND SAVING IN PNG.FILES USING PYTHON .
 
-from turtle import*
-import colorsys
-bgcolor("black")
-tracer(2)
-pensize(4)
-h=0
-for i in range(300):
-    c= colorsys.hsv_to_rgb(h,1,1)
-    color(c)
-    forward(i*2)
-    left(59)
-    h += 0.005
-done()    
+import qrcode
 
-# PROJECT 8
-#RAINBOW HEXAGON Pattern
+text = input("ENTER THE TEXT OR URL FOR QR")
 
-from turtle import*
-import colorsys
+qr = qrcode.make(text)
 
-speed(0)
-h=0
-bgcolor("black")
+filename = "USER.png"
 
-for i in range(300):
-    c= colorsys.hsv_to_rgb(h,1,1)
-    color(c)
-    circle(150)
-    left(10)
-    h += 0.005
+qr.save(filename)
 
-done()    
-
-                          VARIOUS PRACTISE QUESTIONS OF PYTHONS . ><><> 
-
-print("hello lucky \nhow are you")
-
- #   Q.NO 2
-
-  print("lucky chauhan, age =18 years old,city = patna city")
-
- ## Q.NO 3
-
-a= float(input("entered the no:"))
-b= float(input("entered the second no:"))
-print("before swapping:","a=",a ,"b=",b)
-a= a+b
-b=a-b
-a=b-a
-print("after swapping:","a=",a ,"b=",b)
+print("QRCODE SAVE AS FILENAME = ",filename)
 
 
-
-## Q.NO 4
-
- a= "lucky chauhan"
- b= 56
- c= 76.889
-E= None
-
-print(type(d))
-print(type(c))
-print(type(b))
-print(type(a))
-print(type(E))
-
-# Q.NO 5 
-def converter(celcius):
-    return( (celcius * 9/5) +32)
-print(converter(65))
-
-x= int(input("entered the celcius to convert:"))
-print("farenhite=",(x * 9/5) +32) 
-
-
- ## Q.NO 6 
-X= input("enterd name:")     
-y= input("enterd age:")  
-
-print("hello",X,"you are",y ,"year old")
-
-# // # Q.NO 7
-x= int(input("lenght of rectangle:"))
-y= int(input("breadth of rectangle:"))
-print("perimeter of rectangle =", 2*(x+y))
-print("AREA of rectangle =",x * y)
-
-
-// # Q.NO 8
-x= int(input("enterd no:"))
-
-if(x >  0):
-   print("positive")
-elif( x < 0):
-  print("negative")  
-else:
-   print("0")     
-
-// ## Q.NO 9 
-i = 1
-while i <= 50:
-    print(i)
-    i += 1
-
-for el in range (1,51,1):
-    print(el)
-
- ### Q.NO 10
-i= 0
-while i <= 100:
-    print(i)
-    i +=2
-
-for i in  range (0,101,2) :
-    print("\n\n",i)  
-
-# Q.NO 11
-n= int(input("enterd a number:"))
-
-print("sum using formula=", n*(n+1)/2)    
-
- ## Q.NO 12
-
-n= int(input("entered the factorial:")) 
-if n <0 :
-    print("FACTORIAL DOES NOT DEFINE FOR  0 ANFD NEGATIVE VALUES:") 
-
-else:
-    factorial =1
-    for i in range(1,n+1):
-        factorial *= i
-    print("FACTORIAL OF",n,"is:",factorial)
-       
-# Q.NO 13 
-
-str= ["lucky","bholu","golu","34","45","rounak"]
-str.reverse()
-print(str)
-
-Q.NO 14
-
-str= "he is such a good boy i have ever met"
-vowel= "aeiouAEIOU"
-count= 0
-
-for cha in str:
-    if cha in vowel:
-        count+= 1
-
-print("number of vowelin the str:",vowel(str))        
-
-# Q.NO 16
-
-list=[34,65,89,90,100,76,43,12]
-largest= max(list)
-
-print("the largest number is :", largest)
-
-# Q.NO 17
-list=[34,65,89,90,100,76,43,12]
-x= sum(list)
-
-print("sum of all el in list is :", x)
-
-# Q.NO 18
-str= ["lucky","bholu","34","bholu","golu"]
-str.remove("bholu")
-print(str)
- 
-# Q.NO 19
-list=[24,45,65,42,80,100,49,89]
-
-for numb in list:
-    if numb % 2 == 0:
-        print(numb)
-
-# Q.NO 20
-n= int(input("entered the no:"))
-def is_prime(n):
-    if n<= 1:
-        return False
-    for i in range (2,int(n**0.5)+1):
-        if n % i == 0:
-            return False
-        return True
-    
-if is_prime(n):
-    print(n,"is a prime no.")
-
-else:
-    print(n,"is not a prime no.")
-
-# Q,NO 21
-n= int(input("enteered the no:"))
-def squarenumber(n):
-    return(n*n)
-
-print(squarenumber(n))
-
-# Q.NO 22
-def count(sentence):
-    return(len(sentence))
-
-print(count("lucky chauhan is such a good coder in his entire village"))
-
-#another type
-def count(sentences):
-    words= sentences.split()
-    return len(words)
-
-print(count("lucky chauhan is such a good coder in his entire village"))
-
-# Q.NO 23
-n= int(input("entered the following year:"))
-if( n % 4 == 0):
-    print("it is a leap year,thank you")
-
-else:
-    print("its not a leap year, thank you")    
-
-# Q.NO 24
-p= input("enterd the first no:")
-q=  input("enterd the second no:")
-r= input("enterd the third no:")
-
-if( p >= q and p >= r):
-    greatest =p
-elif( q >= p and q >= r):
-    greatest=  q
-else:
-    greatest = r     
-print("the greatest no is :", greatest)
-
-Q.NO 25
-n= int(input("entered the no:"))
-if( n % 3 == 0 and n % 5 == 0):
-    print("yes its divisible")
-
-else:
-    print(" no its not divisible ")    
 
 
 
